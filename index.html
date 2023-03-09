@@ -8,38 +8,53 @@
       name="description"
       content="Purchase high-quality jackets from Rainy Days"
     />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>Rainy Days | Home</title>
   </head>
   <body>
-    <header class="background">
-      <nav>
-        <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
-        <div>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <header class="header-footer">
+      <nav class="header">
+        <div class="header-logo">
+          <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
+        </div>
+        <div class="default-links">
+          <ul class="header-links">
+            <h1>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Shop</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </h1>
           </ul>
         </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
+        <div class="user-icons">
+          <ul>
+            <li>
+              <img
+                src="images/assets/icons/user_profile_icon.png"
+                alt="User profile"
+              />
+            </li>
+            <li>
+              <img
+                src="images/assets/icons/favourites_icon_white.png"
+                alt="Favourites"
+              />
+            </li>
+            <li>
+              <img
+                src="images/assets/icons/shopping_bag_icon.png"
+                alt="Shopping bag"
+              />
+            </li>
+          </ul>
         </div>
-        <form id="form">
-          <input type="search" id="query" name="q" placeholder="Search.." />
-          <button>Search</button>
-        </form>
+        <div class="header-search">
+          <form id="form">
+            <input type="search" id="query" name="q" placeholder="Search.." />
+            <button>Search</button>
+          </form>
+        </div>
       </nav>
     </header>
     <main>
@@ -82,11 +97,11 @@
         </div>
       </section>
     </main>
-    <footer class="background">
+    <footer class="header-footer">
       <h6>Customer Service</h6>
       <h6>
-        <div>
-          <ul>
+        <div class="default-links">
+          <ul class="footer-links">
             <li><a href="#">FAQ</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About us</a></li>
