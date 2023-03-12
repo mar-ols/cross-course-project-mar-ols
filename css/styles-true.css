@@ -1,0 +1,55 @@
+body {
+  font-family: "Bahnschrift";
+}
+
+h1 {
+  font-size: 30px;
+}
+
+header,
+footer {
+  color: #ffffffff;
+  background-color: #0b626f;
+}
+
+header a,
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header a:hover,
+footer a:hover {
+  color: #f5c55d;
+}
+
+.footer-links {
+  list-style-type: none;
+}
+
+.header-links li {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0px 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.header-logo {
+  max-width: 100%;
+  height: auto;
+  margin: 0px 0px 0px 70px;
+}
+
+.user-icons li {
+  display: inline-block;
+  margin: 0px 20px 0px 0px;
+}
+
+.header-search {
+  margin: 0px 70px 0px 0px;
+}

@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="header">
         <div>
           <img
             class="header-logo"
@@ -22,11 +22,8 @@
           />
         </div>
         <div>
-          <img src="images/assets/icons/menu_icon.png" />
-        </div>
-        <div>
           <h1>
-            <ul>
+            <ul class="header-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Shop</a></li>
               <li><a href="about.html">About Us</a></li>
@@ -34,28 +31,31 @@
             </ul>
           </h1>
         </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
+        <div class="user-icons">
+          <ul>
+            <li>
+              <img
+                src="images/assets/icons/user_profile_icon.png"
+                alt="User profile"
+              />
+            </li>
+            <li>
+              <img
+                src="images/assets/icons/favourites_icon_white.png"
+                alt="Favourites"
+              />
+            </li>
+            <li>
+              <img
+                src="images/assets/icons/shopping_bag_icon.png"
+                alt="Shopping bag"
+              />
+            </li>
+          </ul>
         </div>
-        <div>
-          <form id="search">
-            <input
-              type="search"
-              id="search-site"
-              name="search-site"
-              placeholder="Search.."
-            />
+        <div class="header-search">
+          <form id="form">
+            <input type="search" id="query" name="q" placeholder="Search.." />
             <button>Search</button>
           </form>
         </div>
@@ -72,7 +72,7 @@
         <a href="products.html">Shop men</a>
         <a href="products.html">Shop women</a>
         <img
-          src="images/hero_img.jpg"
+          src="#"
           alt="Woman zipping up jacket with mountains in background"
         />
       </section>
@@ -105,20 +105,16 @@
       <h6>Customer Service</h6>
       <div>
         <h6>
-          <ul>
+          <ul class="footer-links">
             <li><a href="#">FAQ</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-          <ul>
             <li><a href="about.html">About us</a></li>
             <li><a href="#">Terms & Conditions</a></li>
           </ul>
         </h6>
       </div>
       <div>
-        <h6>
-          Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
-        </h6>
+        Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
       </div>
       <div>
         <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
@@ -127,10 +123,7 @@
         <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
       </div>
       <div>
-        <img
-          src="images/assets/footer_payment_icons.png"
-          alt="Secure shipping and payment"
-        />
+        <img src="#" alt="Secure shipping and payment" />
       </div>
     </footer>
   </body>
