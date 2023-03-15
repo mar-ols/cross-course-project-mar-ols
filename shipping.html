@@ -4,67 +4,241 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Shipping page" />
+    <meta name="description" content="Enter shipping information" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>Rainy Days | Shipping</title>
   </head>
   <body>
-    <header class="background">
+    <header>
+      <img src="images/assets/rainydays_logo.png" id="logo" />
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-menu"
+        ><img src="images/assets/icons/menu_icon.png"
+      /></label>
       <nav>
-        <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
-        <div class="default-white">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
-        </div>
-        <form id="form">
-          <input type="search" id="query" name="q" placeholder="Search.." />
-          <button>Search</button>
-        </form>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <div class="user-icons">
+        <a href="#"
+          ><img src=images/assets/icons/user_profile_icon.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/favourites_icon_white.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/shopping_bag_icon.png
+          class="icon_menu_img"></a
+        >
+      </div>
+      <div class="search">
+        <form>
+          <input
+            type="search"
+            id="search-site"
+            name="search-site"
+            class="search-site"
+            placeholder="Search.."
+          />
+        </form>
+      </div>
     </header>
-    <main></main>
-    <footer class="background">
-      <h6>Customer Service</h6>
-      <h6>
-        <div class="default-white">
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <div>
-          Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
-        </div>
-      </h6>
+    <main>
+      <h1>Enter shipping information</h1>
+      <img
+        src="images/assets/icons/progress_bar2.png"
+        alt="Progress status: shipping info"
+      />
+      <p>2. Shipping information</p>
       <div>
-        <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
-        <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
-        <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
-        <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        <p>Choose shipping method:</p>
+        <form action="" class="shipping">
+          <fieldset>
+            <input
+              type="radio"
+              id="pickup-point"
+              name="shipping-method"
+              value="pickup-point"
+              checked
+            />
+            <label for="pickup-point"
+              >Ship to pick-up point<br />Delivered by mail in 2-5 business days
+              $10</label
+            >
+          </fieldset>
+          <fieldset>
+            <input
+              type="radio"
+              id="front-door"
+              name="shipping-method"
+              value="front-door"
+            />
+            <label for="front-door"
+              >Ship to front door<br />
+              Delivered by mail in 2-5 business days $15</label
+            >
+          </fieldset>
+          <fieldset>
+            <input
+              type="radio"
+              id="pickup-warehouse"
+              name="shipping-method"
+              value="pickup-warehouse"
+            />
+            <label for="pickup-warehouse"
+              >Pick-up at warehouse<br />Pick up at our location at Rainy Street
+              404, Oslo $0</label
+            >
+          </fieldset>
+        </form>
+        <input
+          type="checkbox"
+          id="billing-match"
+          name="billing-match"
+          value="billing-match"
+        />
+        <label for="billing-match"
+          >Billing address matches shipping address</label
+        >
+      </div>
+      <div>
+        <form>
+          <label for="first-name">First name:</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            class="form_input"
+            placeholder="First name"
+          />
+          <label for="last-name">Last name:</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            class="form_input"
+            placeholder="Last name"
+          /><br />
+          <label for="s-address">Street address:</label>
+          <input
+            type="text"
+            id="s-address"
+            name="s-address"
+            class="form_input"
+            placeholder="Street address"
+          />
+          <label for="s-address2"></label>
+          <input
+            type="text"
+            id="s-address2"
+            name="s-address2"
+            class="form_input"
+          />
+          <label for="zipcode">Zip code:</label>
+          <input
+            type="tel"
+            id="zipcode"
+            name="zipcode"
+            class="form_input"
+            placeholder="Zip code"
+          />
+          <label for="county">County:</label>
+          <input
+            type="text"
+            id="county"
+            name="county"
+            class="form_input"
+            placeholder="County"
+          /><br />
+          <label for="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            class="form_input"
+            placeholder="Country"
+          />
+          <label for="phone-no">Phone no:</label>
+          <input
+            type="tel"
+            id="phone-no"
+            name="phone-no"
+            class="form_input"
+            placeholder="XX-XXX-XXX"
+          />
+          <label for="reg-email">E-mail address:</label>
+          <input
+            type="email"
+            id="reg-email"
+            name="reg-email"
+            class="form_input"
+            placeholder="Email@email.com"
+          />
+        </form>
+        <input
+          type="checkbox"
+          id="save-info"
+          name="save-info"
+          value="save-info"
+        />
+        <label for="save-info"
+          >Save information and create account for future purchases</label
+        >
+        <p>
+          <label for="create-pw">Create password:</label>
+          <input
+            type="password"
+            id="create-pw"
+            name="create-pw"
+            class="form_input"
+            placeholder="*******"
+          />
+          <label for="repeat-pw">Repeat password:</label>
+          <input
+            type="password"
+            id="repeat-pw"
+            name="repeat-pw"
+            class="form_input"
+            placeholder="*******"
+          />
+        </p>
+        <p>
+          <a href="shopping_bag.html" class="cta-button">Go back</a>
+          <a href="payment.html" class="cta-button">Proceed to payment</a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-links">
+        Customer Service
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        Call us at: (01) 555-555 (8AM-4PM)<br />Or email at:
+        contact@rainydays.com
+      </div>
+      <div class="socials">
+        Join our socials:
+        <p>
+          <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
+          <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
+          <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
+          <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        </p>
       </div>
       <div>
         <img
           src="images/assets/footer_payment_icons.png"
+          id="payment-footer"
           alt="Secure shipping and payment"
         />
       </div>

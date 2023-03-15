@@ -6,39 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="About Rainy Days" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Rainy Days | About</title>
+    <title>Rainy Days | About us</title>
   </head>
   <body>
-    <header class="background">
+    <header>
+      <img src="images/assets/rainydays_logo.png" id="logo" />
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-menu"
+        ><img src="images/assets/icons/menu_icon.png"
+      /></label>
       <nav>
-        <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
-        <div class="default-white">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
-        </div>
-        <form id="form">
-          <input type="search" id="query" name="q" placeholder="Search.." />
-          <button>Search</button>
-        </form>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html" class="active-page">About us</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <div class="user-icons">
+        <a href="#"
+          ><img src=images/assets/icons/user_profile_icon.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/favourites_icon_white.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/shopping_bag_icon.png
+          class="icon_menu_img"></a
+        >
+      </div>
+      <div class="search">
+        <form>
+          <input
+            type="search"
+            id="search-site"
+            name="search-site"
+            class="search-site"
+            placeholder="Search.."
+          />
+        </form>
+      </div>
     </header>
     <main>
       <h1>About Rainy Days</h1>
@@ -54,30 +61,33 @@
         alt="Rainy Days headquarters building"
       />
     </main>
-    <footer class="background">
-      <h6>Customer Service</h6>
-      <h6>
-        <div class="default-white">
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <div>
-          Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
-        </div>
-      </h6>
-      <div>
-        <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
-        <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
-        <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
-        <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+    <footer>
+      <div class="footer-links">
+        Customer Service
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        Call us at: (01) 555-555 (8AM-4PM)<br />Or email at:
+        contact@rainydays.com
+      </div>
+      <div class="socials">
+        Join our socials:
+        <p>
+          <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
+          <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
+          <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
+          <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        </p>
       </div>
       <div>
         <img
           src="images/assets/footer_payment_icons.png"
+          id="payment-footer"
           alt="Secure shipping and payment"
         />
       </div>

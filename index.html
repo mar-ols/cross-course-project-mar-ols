@@ -13,75 +13,73 @@
   </head>
   <body>
     <header>
+      <img src="images/assets/rainydays_logo.png" id="logo" />
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-menu"
+        ><img src="images/assets/icons/menu_icon.png"
+      /></label>
       <nav>
-        <div>
-          <img
-            class="header-logo"
-            src="images/assets/rainydays_logo.png"
-            alt="Rainy Days logo"
-          />
-        </div>
-        <div>
-          <img src="images/assets/icons/menu_icon.png" alt="Drop down menu" />
-        </div>
-        <div>
-          <ul>
-            <h1>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Shop</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </h1>
-          </ul>
-        </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
-        </div>
-        <div>
-          <form id="search">
-            <input
-              type="search"
-              id="search-site"
-              name="search-site"
-              placeholder="Search.."
-            />
-            <button>Search</button>
-          </form>
-        </div>
+        <a href="index.html" class="active-page">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <div class="user-icons">
+        <a href="#"
+          ><img src=images/assets/icons/user_profile_icon.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/favourites_icon_white.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/shopping_bag_icon.png
+          class="icon_menu_img"></a
+        >
+      </div>
+      <div class="search">
+        <form>
+          <input
+            type="search"
+            id="search-site"
+            name="search-site"
+            class="search-site"
+            placeholder="Search.."
+          />
+        </form>
+      </div>
     </header>
     <main>
       <section>
-        <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
-        <h1>Quality jackets since 1954</h1>
-        <p>
-          Whether you're a seasoned outdoorsman or have just dipped your toe in
-          the water, we've got you covered
-        </p>
-        <a href="products.html" class="cta-index">Shop men</a>
-        <a href="products.html" class="cta-index">Shop women</a>
-        <img
-          src="images/hero_img.jpg"
-          alt="Woman zipping up jacket with mountains in background"
-        />
-      </section>
-      <section>
+        <div class="intro-text">
+          <img
+            src="images/assets/rainydays_logo.png"
+            class="logo"
+            alt="Rainy Days logo"
+          />
+          <h1>Quality jackets since 1954</h1>
+          <p>
+            Whether you're a seasoned outdoorsman or have just dipped your toe
+            in the water, we've got you covered
+          </p>
+          <a href="products.html" class="cta-index-button">Shop men</a>
+          <a href="products.html" class="cta-index-button">Shop women</a>
+        </div>
         <div>
+          <img
+            src="images/hero_img.jpg"
+            class="hero-img"
+            alt="Woman zipping up jacket with mountains in background"
+          />
+        </div>
+      </section>
+      <section class="sale-newsletter">
+        <div class="sale">
           <h2>Sale</h2>
           <p>Up to 70% off</p>
         </div>
-        <div>
+        <div class="newsletter">
           <h3>Win jackets for a value of $1000</h3>
           <p>
             Sign up for our newsletter to get exclusive offers and product news
@@ -93,7 +91,7 @@
             <input
               type="email"
               id="newsletter-email"
-              name="email"
+              name="newsletter-email"
               placeholder="Enter email address..."
             />
             <button type="submit">Submit</button>
@@ -102,35 +100,32 @@
       </section>
     </main>
     <footer>
-      <h6>Customer Service</h6>
-      <div>
+      <div class="footer-links">
+        Customer Service
         <ul>
-          <h6>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </h6>
-        </ul>
-        <ul>
-          <h6>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </h6>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
-      <div>
-        <h6>
-          Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
-        </h6>
+      <div class="contact-info">
+        Call us at: (01) 555-555 (8AM-4PM)<br />Or email at:
+        contact@rainydays.com
       </div>
-      <div>
-        <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
-        <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
-        <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
-        <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+      <div class="socials">
+        Join our socials:
+        <p>
+          <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
+          <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
+          <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
+          <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        </p>
       </div>
       <div>
         <img
           src="images/assets/footer_payment_icons.png"
+          id="payment-footer"
           alt="Secure shipping and payment"
         />
       </div>

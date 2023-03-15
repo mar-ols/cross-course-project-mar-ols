@@ -4,67 +4,185 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Payment page" />
+    <meta name="description" content="Enter billing information" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Rainy Days | Payment</title>
+    <title>Rainy Days | Billing</title>
   </head>
   <body>
-    <header class="background">
+    <header>
+      <img src="images/assets/rainydays_logo.png" id="logo" />
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-menu"
+        ><img src="images/assets/icons/menu_icon.png"
+      /></label>
       <nav>
-        <img src="images/assets/rainydays_logo.png" alt="Rainy Days logo" />
-        <div class="default-white">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <img
-            src="images/assets/icons/user_profile_icon.png"
-            alt="User profile"
-          />
-          <img
-            src="images/assets/icons/favourites_icon_white.png"
-            alt="Favourites"
-          />
-          <img
-            src="images/assets/icons/shopping_bag_icon.png"
-            alt="Shopping bag"
-          />
-        </div>
-        <form id="form">
-          <input type="search" id="query" name="q" placeholder="Search.." />
-          <button>Search</button>
-        </form>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <div class="user-icons">
+        <a href="#"
+          ><img src=images/assets/icons/user_profile_icon.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/favourites_icon_white.png
+          class="icon_menu_img"></a
+        >
+        <a href="#"
+          ><img src=images/assets/icons/shopping_bag_icon.png
+          class="icon_menu_img"></a
+        >
+      </div>
+      <div class="search">
+        <form>
+          <input
+            type="search"
+            id="search-site"
+            name="search-site"
+            class="search-site"
+            placeholder="Search.."
+          />
+        </form>
+      </div>
     </header>
-    <main></main>
-    <footer class="background">
-      <h6>Customer Service</h6>
-      <h6>
-        <div class="default-white">
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <div>
-          Call us at: (01) 555-555 (8AM-4PM) Or email at: contact@rainydays.com
-        </div>
-      </h6>
+    <main>
+      <h1>Enter billing information</h1>
+      <img
+        src="images/assets/icons/progress_bar3.png"
+        alt="Progress status: billing info"
+      />
+      <p>3. Billing information</p>
       <div>
-        <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
-        <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
-        <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
-        <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        <p>Choose payment method:</p>
+        <form action="" class="payment">
+          <fieldset>
+            <input
+              type="radio"
+              id="cc"
+              name="payment-method"
+              value="cc"
+              checked
+            />
+            <label for="cc"
+              >Credit card<br />
+              <img
+                src="images/assets/icons/visa_mc_logo.png"
+                class="payment_images"
+                alt="Visa and Mastercard logo"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <input
+              type="radio"
+              id="vipps"
+              name="payment-method"
+              value="vipps"
+            />
+            <label for="vipps"
+              >Vipps<br />
+              <img
+                src="images/assets/icons/vipps_logo.png"
+                class="payment_images"
+                alt="Vipps logo"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <input
+              type="radio"
+              id="pay14"
+              name="payment-method"
+              value="pay14"
+            />
+            <label for="pay14"
+              >Pay within 14 days<br /><img
+                src="images/assets/icons/calendar_timed_icon.png"
+                class="payment_images"
+                alt="Calendar with clock icon"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <input
+              type="radio"
+              id="pay-monthly"
+              name="payment-method"
+              value="pay-monthly"
+            />
+            <label for="pay-monthly"
+              >Monthly down-<br />payments<br /><img
+                src="images/assets/icons/monthly_pay_icon.png"
+                class="payment_images"
+                alt="Pie chart for monthly payment icon"
+            /></label>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <form>
+          <label for="cc-number">Credit card number:</label>
+          <input
+            type="tel"
+            id="cc-number"
+            name="cc-number"
+            class="form_input"
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+          />
+          <label for="exp-date">Exp. date:</label>
+          <input
+            type="tel"
+            id="exp-date"
+            name="exp-date"
+            class="form_input"
+            placeholder="00/00"
+          />
+          <label for="cvc">CVC:</label>
+          <input
+            type="tel"
+            id="cvc"
+            name="cvc"
+            class="form_input"
+            placeholder="XXX"
+          /><br />
+          <label for="card-name">Name on card:</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card-name"
+            class="form_input"
+            placeholder="Full name"
+          />
+        </form>
+        <a href="#" class="order-button">Submit Order</a>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-links">
+        Customer Service
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="contact-info">
+        Call us at: (01) 555-555 (8AM-4PM)<br />Or email at:
+        contact@rainydays.com
+      </div>
+      <div class="socials">
+        Join our socials:
+        <p>
+          <img src="images/assets/icons/fb_icon.png" alt="Facebook" />
+          <img src="images/assets/icons/twitter_icon.png" alt="Twitter" />
+          <img src="images/assets/icons/instagram_icon.png" alt="Instagram" />
+          <img src="images/assets/icons/yt_icon.png" alt="Youtube" />
+        </p>
       </div>
       <div>
         <img
           src="images/assets/footer_payment_icons.png"
+          id="payment-footer"
           alt="Secure shipping and payment"
         />
       </div>
