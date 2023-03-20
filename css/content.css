@@ -1,0 +1,36 @@
+@import url(styles.css);
+
+.hero-img {
+  width: 65.625rem;
+  max-width: 100%;
+}
+
+.cta-button {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #0b626f;
+  border: 1px solid;
+  border-color: #0b626f;
+  padding: 10px;
+  margin: 20px;
+}
+
+.cta-button:hover {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: #f5c55d;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid;
+  border-color: #0b626f;
+}
+
+.order-button {
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #f5c55d;
+  text-decoration: none;
+  padding: 20px 40px;
+}

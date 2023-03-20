@@ -3,28 +3,6 @@
   src: url("../fonts/BAHNSCHRIFT.TTF") format("truetype");
 }
 
-.cta-button {
-  font-size: 1.2rem;
-  color: #fff;
-  text-decoration: none;
-  background-color: #0b626f;
-  border: 1px solid;
-  border-color: #0b626f;
-  padding: 10px;
-  margin: 20px;
-}
-
-.cta-button:hover {
-  font-size: 1.2rem;
-  color: #fff;
-  text-decoration: none;
-  background-color: #f5c55d;
-  padding: 10px;
-  margin: 20px;
-  border: 1px solid;
-  border-color: #0b626f;
-}
-
 fieldset {
   border: 1px solid #0b626f;
   border-radius: 15px;
@@ -48,12 +26,4 @@ fieldset {
 
 form {
   margin: 40px 0px;
-}
-
-.order-button {
-  font-size: 1.2rem;
-  color: #000;
-  background-color: #f5c55d;
-  text-decoration: none;
-  padding: 20px 40px;
 }
