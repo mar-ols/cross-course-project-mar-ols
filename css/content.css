@@ -1,8 +1,10 @@
 @import url(styles.css);
 
-.hero-img {
-  width: 65.625rem;
-  max-width: 100%;
+/* General styling for main content */
+
+main {
+  margin: 1rem;
+  text-align: center;
 }
 
 .cta-button {
@@ -27,10 +29,148 @@
   border-color: #0b626f;
 }
 
-.order-button {
-  font-size: 1.2rem;
-  color: #000;
-  background-color: #f5c55d;
+.progress_bar {
+  width: 70rem;
+  max-width: 100%;
+}
+
+.shipping {
+  max-width: 40%;
+}
+
+/* Mobile styling for: index.html */
+
+.content-logo {
+  display: none;
+}
+
+.intro-text,
+.newsletter {
+  padding: 1rem;
+  border: 1px solid #0b626f;
+  margin: 1rem 0rem;
+}
+
+.intro-links {
+  background-color: #0b626f;
+}
+
+.intro-links a {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #0b626f;
+  background-color: #fff;
   text-decoration: none;
-  padding: 20px 40px;
+  text-align: center;
+  width: 7rem;
+  max-width: 100%;
+  margin: 1rem;
+  padding: 0.6rem;
+}
+
+.sale {
+  text-transform: uppercase;
+  color: #f5c55d;
+  background-color: #000;
+  padding: 1rem;
+}
+
+#newsletter-email {
+  color: #0b626f;
+  border: none;
+  border-bottom: 1px solid #0b626f;
+  font-size: 1rem;
+  padding: 0.5rem;
+  max-width: 100%;
+}
+
+#newsletter button {
+  background-color: #0b626f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* Mobile/desktop styling: about.html */
+
+.rainydays-hq,
+.about-info {
+  width: 55rem;
+  max-width: 100%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .content-logo {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .desktop-intro {
+    color: #fff;
+    background-color: #0b626f;
+    border: solid 1px #ccc;
+    outline: solid 1rem #0b626f;
+    width: 35%;
+    position: absolute;
+    top: 7vh;
+    left: 15vw;
+    padding: 1rem;
+  }
+
+  .desktop-hero {
+    background-image: url("../images/hero_img.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 30vw;
+    background-position-y: center;
+    height: 40rem;
+    position: relative;
+    margin-right: 5vw;
+  }
+
+  .intro-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .intro-links a {
+    display: inline-block;
+    margin: 1.25rem;
+  }
+
+  .intro-links a:hover {
+    background-color: #f5c55d;
+  }
+
+  .sale-newsletter {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .sale-newsletter > * {
+    flex: 1;
+    height: 13rem;
+    max-height: 100%;
+  }
+
+  .sale {
+    border: 1px solid #000;
+  }
+
+  .sale h2 {
+    padding-top: 2rem;
+  }
 }
