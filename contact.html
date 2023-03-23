@@ -58,58 +58,72 @@
       </header>
       <main>
         <h1>Contact Rainy Days</h1>
-        <section>
-          <p>
-            Our opening hours are 8PM to 4PM <br />Get in touch with us here:
-          </p>
-          <br /><img
-            src="images/assets/icons/envelope_icon.png"
-            alt="Envelope icon"
-          />
-          contact@rainydays.com
-          <br /><img
-            src="images/assets/icons/phone_icon.png"
-            alt="Phone icon"
-          />
-          (01)555-555
-          <br /><img
-            src="images/assets/icons/house_icon.png"
-            alt="House/address icon"
-          />
-          Main Street 65 0123 <br />Anytown, USA
-        </section>
-        <section>
-          <p>Or send us a message by filling out this form:</p>
-          <form>
-            <label for="full-name">Your name:</label>
-            <input
-              type="text"
-              id="full-name"
-              name="fname"
-              class="form_input"
-              placeholder="Your name"
-            />
-            <label for="enter-email">Your email-address:</label>
-            <input
-              type="email"
-              id="enter-email"
-              name="email"
-              class="form_input"
-              placeholder="Enter email address"
-            />
-            <label for="message-subject">Subject:</label>
-            <input
-              type="text"
-              id="message-subject"
-              name="subject"
-              class="form_input"
-              placeholder="Subject"
-            />
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" class="form_input"></textarea>
+        <div class="contact">
+          <section class="contact_info">
+            <p>Our opening hours are 8PM to 4PM</p>
+            <p>Get in touch with us here:</p>
+            <div>
+              <img
+                src="images/assets/icons/envelope_icon.png"
+                class="contact_icons"
+                alt="Envelope icon"
+              />
+              contact@rainydays.com
+            </div>
+            <div>
+              <img
+                src="images/assets/icons/phone_icon.png"
+                class="contact_icons"
+                alt="Phone icon"
+              />
+              (01)555-555
+            </div>
+            <div class="contact_address">
+              <img
+                src="images/assets/icons/house_icon.png"
+                class="contact_icons"
+                alt="House/address icon"
+              />
+              Main Street 65 0123 <br />Anytown, USA
+            </div>
+          </section>
+          <section class="contact_form">
+            <p>Or send us a message by filling out this form:</p>
+            <form class="contact_input">
+              <label for="full-name">Your name:</label>
+              <input
+                type="text"
+                id="full-name"
+                name="fname"
+                class="form_input"
+                placeholder="Your name"
+              />
+              <label for="enter-email">Your email-address:</label>
+              <input
+                type="email"
+                id="enter-email"
+                name="email"
+                class="form_input"
+                placeholder="Enter email address"
+              />
+              <label for="message-subject">Subject:</label>
+              <input
+                type="text"
+                id="message-subject"
+                name="subject"
+                class="form_input"
+                placeholder="Subject"
+              />
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form_input"
+              ></textarea>
+            </form>
             <button type="submit">Send</button>
-          </form>
-        </section>
+          </section>
+        </div>
       </main>
       <footer>
         <div class="footer-links">

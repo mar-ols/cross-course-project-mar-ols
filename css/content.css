@@ -25,8 +25,17 @@ img {
 }
 
 main {
-  margin: 1rem;
+  margin: 1.5rem;
   text-align: center;
+}
+
+main a {
+  color: #0b626f;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #f5c55d;
 }
 
 .wrapper {
@@ -48,7 +57,7 @@ main {
   border: 1px solid;
   border-color: #0b626f;
   padding: 0.6rem;
-  margin: 1.5rem;
+  margin: 0.5rem;
 }
 
 .cta-button:hover {
@@ -57,9 +66,17 @@ main {
   text-decoration: none;
   background-color: #f5c55d;
   padding: 0.6rem;
-  margin: 1.5rem;
+  margin: 0.5rem;
   border: 1px solid;
   border-color: #0b626f;
+}
+
+button[type="submit"] {
+  background-color: #0b626f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 /* Mobile styling for: index.html */
@@ -108,14 +125,6 @@ main {
   max-width: 100%;
 }
 
-#newsletter button {
-  background-color: #0b626f;
-  color: #fff;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 0px 10px 10px 0px;
-}
-
 /* Mobile/desktop styling: about.html */
 
 .rainydays-hq,
@@ -124,6 +133,130 @@ main {
   max-width: 100%;
   margin: auto;
   padding-bottom: 1rem;
+}
+
+/* Mobile/desktop styling for contact.html */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50rem;
+  max-width: 100%;
+}
+
+.contact_info,
+.contact_form {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.contact_info img {
+  width: 3rem;
+}
+
+.contact_info div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact_input {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_input input,
+.contact_input textarea {
+  border: #0b626f 1px solid;
+  width: 100%;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem;
+}
+
+.contact_input textarea {
+  height: 5rem;
+}
+
+#contact_button {
+  background-color: #0b626f;
+  color: #fff;
+  font-family: "Bahnschrift";
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.4rem 1.2rem;
+}
+
+/* Mobile styling for shopping_bag.html */
+
+.item_headers,
+.item_info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: auto;
+  width: 40rem;
+  max-width: 100%;
+}
+
+.item_headers,
+.sb_jacket,
+.sum_breakdown {
+  border-bottom: 2px solid #0b626f;
+}
+
+.item_headers p {
+  margin-left: 3rem;
+}
+
+.item_info p {
+  margin-left: 1.5rem;
+}
+
+.sb_jacket {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 40rem;
+  max-width: 100%;
+  padding-bottom: 2rem;
+}
+
+.product_specific_img {
+  width: 15rem;
+}
+
+.sum_breakdown {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.breakdown_text {
+  text-align: left;
+}
+
+.breakdown_numbers {
+  text-align: right;
+}
+
+#discount {
+  border: #0b626f 1px solid;
+  margin: 0.5rem 0rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.buttons {
+  flex-wrap: wrap;
+}
+
+.buttons > * {
+  flex: 1;
 }
 
 /* Mobile/desktop styling: shipping.html/payment.html */
@@ -283,5 +416,11 @@ main {
 
   .sale h2 {
     padding-top: 2rem;
+  }
+
+  /* Desktop styling for shopping_bag.html */
+
+  .buttons {
+    flex-direction: row;
   }
 }
