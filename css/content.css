@@ -125,6 +125,59 @@ button[type="submit"] {
   max-width: 100%;
 }
 
+/* Mobile styling for products.html */
+
+.product_img,
+.filters {
+  display: flex;
+  margin: auto;
+  width: 68rem;
+  max-width: 100%;
+}
+
+.filters {
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.product_img img {
+  border-top: 1px #0b626f solid;
+  border-bottom: 1px #0b626f solid;
+}
+
+.filters > * {
+  margin-left: 2rem;
+}
+
+div select {
+  border: none;
+  color: #0b626f;
+}
+
+select option {
+  background-color: #0b626f;
+  color: #fff;
+}
+
+.jacket,
+.jacket p {
+  margin: 2rem auto;
+  border: 1px solid #0b626f;
+  width: 21rem;
+  max-width: 100%;
+}
+
+.jacket p,
+.jacket a,
+.jacket a:hover {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  padding: 1rem 0rem;
+  margin: 0;
+}
+
 /* Mobile/desktop styling: about.html */
 
 .rainydays-hq,
@@ -418,9 +471,26 @@ button[type="submit"] {
     padding-top: 2rem;
   }
 
+  /* Desktop styling for products.html */
+
+  .product_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70rem;
+    max-width: 100%;
+    margin: auto;
+  }
+
   /* Desktop styling for shopping_bag.html */
 
   .buttons {
     flex-direction: row;
+  }
+
+  /* Desktop styling for products.html */
+
+  .filters {
+    flex-direction: row;
+    align-items: center;
   }
 }
