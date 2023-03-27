@@ -108,8 +108,7 @@ footer {
 /* Desktop styling for header/footer */
 
 @media (min-width: 900px) {
-  .hamburger-menu,
-  .hero-img {
+  .hamburger-menu {
     display: none;
   }
 
