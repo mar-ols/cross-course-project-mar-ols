@@ -2,10 +2,6 @@
 
 /* General styling */
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Bahnschrift", Verdana, Geneva, Tahoma, sans-serif;
   color: #0b626f;
