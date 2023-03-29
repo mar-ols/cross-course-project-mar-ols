@@ -387,6 +387,11 @@ select option {
   padding: 1rem 2.5rem;
 }
 
+.order-button:hover {
+  background-color: #0b626f;
+  color: #fff;
+}
+
 /* Mobile styling for checkout_success.html */
 
 .checkout_success {
@@ -476,17 +481,15 @@ select option {
     margin: auto;
   }
 
+  .filters {
+    flex-direction: row;
+    align-items: center;
+  }
+
   /* Desktop styling for shopping_bag.html */
 
   .buttons {
     flex-direction: row;
-  }
-
-  /* Desktop styling for products.html */
-
-  .filters {
-    flex-direction: row;
-    align-items: center;
   }
 
   /* Desktop styling for shipping.html */
