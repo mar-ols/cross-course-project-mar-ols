@@ -2,6 +2,10 @@
 
 /* General styling */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Bahnschrift", Verdana, Geneva, Tahoma, sans-serif;
   color: #0b626f;
@@ -368,10 +372,6 @@ select option {
   flex-direction: column;
 }
 
-.smaller_input {
-  flex-direction: row;
-}
-
 .save_info,
 .cta_buttons {
   display: flex;
@@ -492,10 +492,16 @@ select option {
     flex-direction: row;
     align-items: center;
   }
-}
 
-@media (max-width: 280px) {
-  .progress_text {
-    flex-wrap: wrap;
+  /* Desktop styling for shipping.html */
+
+  .smaller_input {
+    flex-direction: row;
+  }
+
+  @media (max-width: 280px) {
+    .progress_text {
+      flex-wrap: wrap;
+    }
   }
 }
