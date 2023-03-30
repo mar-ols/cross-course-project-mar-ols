@@ -178,6 +178,73 @@ select option {
   margin: 0;
 }
 
+/* Mobile styling for product_specific.html */
+
+.product_specific {
+  margin: auto;
+}
+
+.jacket_specific {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  max-width: 34rem;
+}
+
+.product_img_scott {
+  min-width: 5rem;
+  grid-area: 2 / 1 / 6 / 7;
+}
+
+.thumb-1 {
+  grid-area: 6 / 2 / 6 / 2;
+}
+
+.thumb-2 {
+  grid-area: 6 / 3 / 6 / 3;
+}
+
+.thumb-3 {
+  grid-area: 6 / 4 / 6 / 4;
+}
+
+.thumb-2,
+.thumb-3 {
+  opacity: 0.5;
+}
+
+.fav_icon {
+  grid-area: 2 / 6 / 2 / 6;
+}
+
+.scott-details {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  max-width: 34rem;
+  margin-left: 2rem;
+}
+
+.scott_text {
+  grid-area: 1 / 1 / 1 / 7;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.scott_list {
+  grid-area: 2 / 1 / 4 / 3;
+  text-align: left;
+}
+
+.scott_size {
+  grid-area: 2 / 4 / 2 / 6;
+}
+
+.add_bag {
+  grid-area: 6 / 1 / 7 / 4;
+  text-align: left;
+}
+
 /* Mobile/desktop styling: about.html */
 
 .rainydays-hq,
@@ -486,6 +553,18 @@ select option {
     align-items: center;
   }
 
+  /* Desktop styling for product_specific.html */
+
+  .product_specific {
+    display: flex;
+    margin: auto;
+  }
+
+  .scott-details {
+    margin-top: 10rem;
+    max-height: 25rem;
+  }
+
   /* Desktop styling for shopping_bag.html */
 
   .buttons {
@@ -497,10 +576,15 @@ select option {
   .smaller_input {
     flex-direction: row;
   }
+}
 
-  @media (max-width: 280px) {
-    .progress_text {
-      flex-wrap: wrap;
-    }
+@media (max-width: 280px) {
+  .progress_text {
+    flex-wrap: wrap;
+  }
+
+  .scott-details {
+    display: flex;
+    flex-direction: column;
   }
 }
