@@ -13,19 +13,8 @@ body {
   margin: 0;
 }
 
-header,
-footer {
-  position: relative;
-  background-color: #0b626f;
-  padding: 1rem;
-}
-
-.active-page {
-  color: #f5c55d;
-}
-
-img {
-  max-width: 100%;
+.search-label {
+  display: none;
 }
 
 /* Mobile styling for header/footer */

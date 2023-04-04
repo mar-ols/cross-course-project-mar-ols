@@ -1,5 +1,3 @@
-@import url(styles.css);
-
 /* General styling */
 
 body {
@@ -278,14 +276,19 @@ select option {
 
 .contact_info div {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: left;
   gap: 1rem;
+}
+
+.contact_address {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact_input {
   display: flex;
   flex-direction: column;
+  margin-right: 1rem;
 }
 
 .contact_input input,
