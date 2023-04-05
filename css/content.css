@@ -303,13 +303,8 @@ select option {
   height: 5rem;
 }
 
-#contact_button {
-  background-color: #0b626f;
-  color: #fff;
-  font-family: "Bahnschrift";
-  font-size: 1.2rem;
-  border: none;
-  padding: 0.4rem 1.2rem;
+button[type="submit"] {
+  max-width: 4rem;
 }
 
 /* Mobile styling for shopping_bag.html */
