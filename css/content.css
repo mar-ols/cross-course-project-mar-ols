@@ -25,6 +25,7 @@ img {
 main {
   margin: 1.5rem;
   text-align: center;
+  padding: 1rem 0rem;
 }
 
 main a {
@@ -276,7 +277,7 @@ select option {
 
 .contact_info div {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 1rem;
 }
 
