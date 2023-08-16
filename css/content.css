@@ -464,6 +464,10 @@ button[type="submit"] {
   margin: 2rem;
 }
 
+.jacketSale {
+  text-decoration: line-through;
+}
+
 /* Desktop styling */
 
 @media (min-width: 900px) {
