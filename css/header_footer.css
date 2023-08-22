@@ -95,6 +95,14 @@ footer {
   margin: auto;
 }
 
+.error {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #da0b0b;
+  color: #da0b0b;
+  border-radius: 10px;
+}
+
 /* Desktop styling for header/footer */
 
 @media (min-width: 900px) {

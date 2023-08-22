@@ -1,27 +1,57 @@
 const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days";
+const productWrapper = document.querySelector(".product_wrapper");
 
-const getJacketText = document.querySelectorAll(".jacketText");
-
-async function getJackets() {
+const getJackets = async () => {
   const response = await fetch(rainyDaysAPI);
 
   const result = await response.json();
 
-  for (let i = 0; i < result.length; i++) {
-    console.log(result[i]);
-  }
+  return result;
+};
 
-  for (let i = 0; i < getJacketText.length; i++) {
-    let jacketsOnSale = result[i].onSale;
+const displayJackets = async () => {
+  try {
+    const jackets = await getJackets();
 
-    getJacketText[i].innerHTML = ` ${result[i].title} $${result[i].price}`;
+    for (let i = 0; i < jackets.length; i++) {
+      const jacket = jackets[i];
+      const discountedJackets = jackets[i].onSale;
+      const salePrice = jackets[i].discountedPrice;
 
-    if (jacketsOnSale === true) {
-      result[i].price = getJacketText[
-        i
-      ].innerHTML = `${result[i].title} <span class="jacketSale">${result[i].price} </span> $${result[i].discountedPrice}`;
+      const jacketDiv = document.createElement("div");
+      jacketDiv.classList.add("jacket");
+
+      const jacketImage = document.createElement("img");
+      jacketImage.classList.add("jacketImage");
+      jacketImage.src = jacket.image;
+      jacketImage.alt = jacket.description;
+
+      const jacketText = document.createElement("p");
+      jacketText.classList.add("jacketText");
+      jacketText.innerHTML = `${jacket.title} ${jacket.price}`;
+
+      const button = document.createElement("a");
+      button.href = "#";
+      button.classList.add("cta-button");
+      button.textContent = "Add to bag";
+
+      productWrapper.appendChild(jacketDiv);
+      jacketDiv.appendChild(jacketImage);
+      jacketDiv.appendChild(jacketText);
+      jacketDiv.appendChild(button);
+
+      if (discountedJackets === true) {
+        jacketText.innerHTML = `${jacket.title} <span class="jacketSale">${jacket.price}</span> ${salePrice}`;
+      }
     }
+  } catch {
+    productWrapper.innerHTML = `<div class="error">
+                                <p><img src="../images/assets/icons/wizard.png">
+                                You shall not pass!
+                                <img src="../images/assets/icons/wizard.png"></p>
+                                <p>Just kidding. Something went wrong, the wizards will look into it, post haste!</p>
+                                </div>`;
   }
-}
+};
 
-getJackets();
+displayJackets();

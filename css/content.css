@@ -177,6 +177,14 @@ select option {
   margin: 0;
 }
 
+.jacketImage {
+  max-height: 330px;
+}
+
+.jacketSale {
+  text-decoration: line-through;
+}
+
 /* Mobile styling for product_specific.html */
 
 .product_specific {
@@ -462,10 +470,6 @@ button[type="submit"] {
 
 .checkout_success {
   margin: 2rem;
-}
-
-.jacketSale {
-  text-decoration: line-through;
 }
 
 /* Desktop styling */
