@@ -185,6 +185,10 @@ select option {
   text-decoration: line-through;
 }
 
+.wizard {
+  width: 50px;
+}
+
 /* Mobile styling for product_specific.html */
 
 .product_specific {
@@ -558,6 +562,10 @@ button[type="submit"] {
   .filters {
     flex-direction: row;
     align-items: center;
+  }
+
+  .wizard {
+    width: 100px;
   }
 
   /* Desktop styling for product_specific.html */
