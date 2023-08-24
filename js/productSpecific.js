@@ -29,6 +29,7 @@ function createJacketHtml(jacketDetails) {
                                    <div class="scott-details">
                                      <div class="scott_text">
                                        <h3>${jacketDetails.title}</h3>
+                                       <p><span class="sales">$${jacketDetails.price}</span> <span class="hideDiscount">${jacketDetails.discountedPrice}</span></p>
                                      </div>
                                      <div class="scott_list">
                                      ${jacketDetails.description}
@@ -48,6 +49,16 @@ function createJacketHtml(jacketDetails) {
                                      </div>
                                    </div>
                                  </div>`;
+
+  if (!jacketDetails.onSale) {
+    const hideDiscount = document.querySelector(".hideDiscount");
+    hideDiscount.style.display = "none";
+  }
+
+  if (jacketDetails.onSale) {
+    const getSaleSpan = document.querySelector(".sales");
+    getSaleSpan.classList.add("jacketSale");
+  }
 }
 
 fetchJacket();

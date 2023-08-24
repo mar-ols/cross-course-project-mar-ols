@@ -12,23 +12,26 @@ async function displayJackets() {
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
+      const sale = jacket.onSale;
       const jacketImg = jacket.image;
       const jacketTitle = jacket.title;
       const jacketPrice = jacket.price;
       const jacketDiscount = jacket.discountedPrice;
 
-      if (jacket.onSale) {
-        productWrapper.innerHTML += `<div class="jacket">
-                                      <a href="../product_specific.html?id=${jacket.id}"><img src="${jacketImg}" class="jacketImage"></a>
-                                      <p class="jacketText">${jacketTitle} <span class="jacketSale">${jacketPrice}</span> ${jacketDiscount}</p>
-                                      <a href="#" class="cta-button">Add to bag</a>
-                                    </div>`;
-      } else {
-        productWrapper.innerHTML += `<div class="jacket">
-                                      <a href="../product_specific.html?id=${jacket.id}"><img src="${jacketImg}" class="jacketImage"></a>
-                                      <p class="jacketText">${jacketTitle} ${jacketPrice}</p>
-                                      <a href="#" class="cta-button">Add to bag</a>
-                                     </div>`;
+      productWrapper.innerHTML += `<div class="jacket">
+                                     <a href="../product_specific.html?id=${jacket.id}"><img src="${jacketImg}" class="jacketImage"></a>
+                                     <p class="jacketText">${jacketTitle} <span class="sales">${jacketPrice}</span> <span class="hideDiscount">${jacketDiscount}</span></p>
+                                     <a href="#" class="cta-button">Add to bag</a>
+                                   </div>`;
+
+      if (!sale) {
+        const hideDiscount = document.querySelectorAll(".hideDiscount");
+        hideDiscount[i].style.display = "none";
+      }
+
+      if (sale) {
+        const getSaleSpan = document.querySelectorAll(".sales");
+        getSaleSpan[i].classList.add("jacketSale");
       }
     }
   } catch {
