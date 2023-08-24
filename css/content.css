@@ -185,6 +185,10 @@ select option {
   text-decoration: line-through;
 }
 
+.hideDiscount {
+  color: #f12323;
+}
+
 .wizard {
   width: 50px;
 }

@@ -20,7 +20,7 @@ async function displayJackets() {
 
       productWrapper.innerHTML += `<div class="jacket">
                                      <a href="../product_specific.html?id=${jacket.id}"><img src="${jacketImg}" class="jacketImage"></a>
-                                     <p class="jacketText">${jacketTitle} <span class="sales">${jacketPrice}</span> <span class="hideDiscount">${jacketDiscount}</span></p>
+                                     <p class="jacketText">${jacketTitle} <span class="sales">$${jacketPrice}</span> <span class="hideDiscount">$${jacketDiscount}</span></p>
                                      <a href="#" class="cta-button">Add to bag</a>
                                    </div>`;
 
