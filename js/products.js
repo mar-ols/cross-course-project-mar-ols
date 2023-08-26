@@ -12,26 +12,33 @@ async function displayJackets() {
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
-      const sale = jacket.onSale;
-      const jacketImg = jacket.image;
-      const jacketTitle = jacket.title;
-      const jacketPrice = jacket.price;
-      const jacketDiscount = jacket.discountedPrice;
+      const discountedJackets = jackets[i].onSale;
+      const salePrice = jackets[i].discountedPrice;
 
-      productWrapper.innerHTML += `<div class="jacket">
-                                     <a href="../product_specific.html?id=${jacket.id}"><img src="${jacketImg}" class="jacketImage"></a>
-                                     <p class="jacketText">${jacketTitle} <span class="sales">$${jacketPrice}</span> <span class="hideDiscount">$${jacketDiscount}</span></p>
-                                     <a href="#" class="cta-button">Add to bag</a>
-                                   </div>`;
+      const jacketDiv = document.createElement("div");
+      jacketDiv.classList.add("jacket");
 
-      if (!sale) {
-        const hideDiscount = document.querySelectorAll(".hideDiscount");
-        hideDiscount[i].style.display = "none";
-      }
+      const jacketImageLink = document.createElement("a");
+      jacketImageLink.classList.add("jacketImage");
+      jacketImageLink.href = `product_specific.html?id=${jacket.id}`;
+      jacketImageLink.innerHTML = `<img src="${jacket.image}">`;
 
-      if (sale) {
-        const getSaleSpan = document.querySelectorAll(".sales");
-        getSaleSpan[i].classList.add("jacketSale");
+      const jacketText = document.createElement("p");
+      jacketText.classList.add("jacketText");
+      jacketText.innerHTML = `${jacket.title} $${jacket.price}`;
+
+      const viewButton = document.createElement("a");
+      viewButton.href = `product_specific.html?id=${jacket.id}`;
+      viewButton.classList.add("cta-button");
+      viewButton.textContent = "Click to view";
+
+      productWrapper.appendChild(jacketDiv);
+      jacketDiv.appendChild(jacketImageLink);
+      jacketDiv.appendChild(jacketText);
+      jacketDiv.appendChild(viewButton);
+
+      if (discountedJackets) {
+        jacketText.innerHTML = `${jacket.title} <span class="jacketSale">${jacket.price}</span> <span class="discount">${salePrice}</span>`;
       }
     }
   } catch {

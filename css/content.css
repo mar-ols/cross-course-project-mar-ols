@@ -159,17 +159,23 @@ select option {
   color: #fff;
 }
 
+.jacket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .jacket,
 .jacket p {
   margin: 2rem auto;
   border: 1px solid #0b626f;
-  width: 21rem;
+  width: 24rem;
   max-width: 100%;
 }
 
 .jacket p,
-.jacket a,
-.jacket a:hover {
+.jacket .cta-button,
+.jacket .cta-button:hover {
   width: 100%;
   border-left: none;
   border-right: none;
@@ -178,14 +184,16 @@ select option {
 }
 
 .jacketImage {
-  max-height: 330px;
+  display: block;
+  width: 90%;
+  margin: auto;
 }
 
 .jacketSale {
   text-decoration: line-through;
 }
 
-.hideDiscount {
+.discount {
   color: #f12323;
 }
 
