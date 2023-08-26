@@ -204,68 +204,29 @@ select option {
 /* Mobile styling for product_specific.html */
 
 .product_specific {
+  max-width: 50rem;
   margin: auto;
-}
-
-.jacket_specific {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, auto);
-  max-width: 34rem;
-}
-
-.product_img_scott {
-  min-width: 5rem;
-  grid-area: 2 / 1 / 6 / 7;
-}
-
-.thumb-1 {
-  grid-area: 6 / 2 / 6 / 2;
-}
-
-.thumb-2 {
-  grid-area: 6 / 3 / 6 / 3;
-}
-
-.thumb-3 {
-  grid-area: 6 / 4 / 6 / 4;
-}
-
-.thumb-2,
-.thumb-3 {
-  opacity: 0.5;
-}
-
-.fav_icon {
-  grid-area: 2 / 6 / 2 / 6;
-}
-
-.scott-details {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, auto);
-  max-width: 34rem;
-  margin-left: 2rem;
-}
-
-.scott_text {
-  grid-area: 1 / 1 / 1 / 7;
-  font-size: 1.2rem;
+  padding: 2rem;
   text-align: left;
 }
 
-.scott_list {
-  grid-area: 2 / 1 / 4 / 3;
-  text-align: left;
+.jacketImage {
+  display: flex;
 }
 
-.scott_size {
-  grid-area: 2 / 4 / 2 / 6;
+.jacket_details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.add_bag {
-  grid-area: 6 / 1 / 7 / 4;
-  text-align: left;
+.jacket_description {
+  max-width: 26rem;
+}
+
+.add_bag,
+.add_bag:hover {
+  margin: 1rem 0;
 }
 
 /* Mobile/desktop styling: about.html */
@@ -585,6 +546,14 @@ button[type="submit"] {
   .product_specific {
     display: flex;
     margin: auto;
+  }
+
+  .jacketCard {
+    margin-top: 3rem;
+  }
+
+  .jacket_specific_image {
+    margin: 1.5rem 5rem 2rem 1rem;
   }
 
   .scott-details {

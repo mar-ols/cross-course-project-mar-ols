@@ -27,34 +27,27 @@ function createJacketHtml(jacketDetails) {
       `</option>`;
 
     jacketWrapper.innerHTML = `
-      <div class="product_specific">
-        <div class="jacket_specific">
-          <div>
-            <a href="products.html" class="cta-button">Back</a>
-          </div>
-          <img
-            src="${jacketDetails.image}"
-            alt="${jacketDetails.description}"
-            class="product_img_scott">
-          <div class="fav_icon">
-            <i class="fa-regular fa-heart fa-xl"></i>
-          </div>
+      <div class="back_btn">
+        <a href="products.html" class="cta-button">Back</a>
+      </div>
+      <div class="jacketImage jacket_specific_image">
+        <img src="${jacketDetails.image}" alt="${jacketDetails.description}" class="product_img_scott">
+        <i class="fa-regular fa-heart fa-xl"></i>
+      </div>
+      <div class="jacketCard">
+        <div class="jacket_title">
+          <h3>${jacketDetails.title} <span class="sales">$${jacketDetails.price}</span>
+          <span class="hideDiscount discount">$${jacketDetails.discountedPrice}</span></h3>
         </div>
-        <div class="scott-details">
-          <div class="scott_text">
-            <h3>${jacketDetails.title}</h3>
-            <p><span class="sales">$${jacketDetails.price}</span>
-            <span class="hideDiscount">$${jacketDetails.discountedPrice}</span></p>
-          </div>
-          <div class="scott_list">${jacketDetails.description}</div>
-          <div class="scott_size">
-            <select id="size" name="size">
-              ${createOptions}
-            </select>
-          </div>
-          <div class="add_bag">
-            <a href="../shopping_bag.html" class="cta-button">Add to bag</a>
-          </div>
+        <div class="jacket_details">
+          <p class="jacket_description"> ${jacketDetails.description}</p>
+          <p>Colour: ${jacketDetails.baseColor}</p>
+          <select id="size" name="size">
+            ${createOptions}
+          </select>
+        </div>
+        <div class="add_bag">
+          <a href="../shopping_bag.html" class="cta-button add_bag">Add to bag</a>
         </div>
       </div>`;
 
