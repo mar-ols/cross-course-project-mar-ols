@@ -1,14 +1,13 @@
 import { fetchJacket } from "./api.js";
 
 async function createJacketHtml() {
-  const jacketWrapper = document.querySelector(".product_specific");
-
   const jacketDetails = await fetchJacket();
 
-  let createOptions = `<option value="0">Select size</option>`;
+  const jacketWrapper = document.querySelector(".product_specific");
+  let createSizeOptions = `<option value="0">Select size</option>`;
 
   for (let i = 0; i < jacketDetails.sizes.length; i++) {
-    createOptions +=
+    createSizeOptions +=
       `<option value=` +
       jacketDetails.sizes[i] +
       `">` +
@@ -16,15 +15,15 @@ async function createJacketHtml() {
       `</option>`;
 
     jacketWrapper.innerHTML = `
-                                <div class="back_btn">
+                                <div>
                                   <a href="products.html" class="cta-button">Back</a>
                                 </div>
                                 <div class="jacketImage jacket_specific_image">
-                                  <img src="${jacketDetails.image}" alt="${jacketDetails.description}" class="product_img_scott">
+                                  <img src="${jacketDetails.image}" alt="${jacketDetails.description}">
                                   <i class="fa-regular fa-heart fa-xl"></i>
                                 </div>
                                 <div class="jacketCard">
-                                  <div class="jacket_title">
+                                  <div>
                                     <h3>${jacketDetails.title} <span class="sales">$${jacketDetails.price}</span>
                                     <span class="hideDiscount discount">$${jacketDetails.discountedPrice}</span></h3>
                                   </div>
@@ -32,7 +31,7 @@ async function createJacketHtml() {
                                     <p class="jacket_description"> ${jacketDetails.description}</p>
                                     <p>Colour: ${jacketDetails.baseColor}</p>
                                     <select id="size" name="size">
-                                      ${createOptions}
+                                      ${createSizeOptions}
                                     </select>
                                   </div>
                                   <div class="add_bag">
