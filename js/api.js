@@ -1,6 +1,8 @@
+import { showLoader } from "./loader.js";
 export const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
 
 export async function fetchJackets() {
+  showLoader();
   const response = await fetch(rainyDaysAPI);
 
   const result = await response.json();

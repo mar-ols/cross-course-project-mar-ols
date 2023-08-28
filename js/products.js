@@ -1,10 +1,9 @@
 import { fetchJackets } from "./api.js";
 import { error } from "./error.js";
 
-const productWrapper = document.querySelector(".product_wrapper");
-productWrapper.innerHTML = `<div class="loader"></div>`;
-
 async function displayJackets() {
+  const productWrapper = document.querySelector(".product_wrapper");
+
   try {
     const jackets = await fetchJackets();
     const loaderDiv = document.querySelector(".loader");
@@ -46,4 +45,4 @@ async function displayJackets() {
   }
 }
 
-setTimeout(displayJackets, 1000);
+displayJackets();
