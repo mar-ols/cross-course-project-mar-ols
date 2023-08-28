@@ -3,6 +3,8 @@ import { fetchJackets } from "./api.js";
 async function displayJackets() {
   const jackets = await fetchJackets();
   const productWrapper = document.querySelector(".product_wrapper");
+  const getLoaderDiv = document.querySelector(".loader");
+  getLoaderDiv.classList.remove("loader");
 
   jackets.forEach((jacket) => {
     if (jacket.onSale) {

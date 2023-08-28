@@ -4,6 +4,9 @@ async function createJacketHtml() {
   const jacketDetails = await fetchJacket();
 
   const jacketWrapper = document.querySelector(".product_specific");
+  const getLoaderDiv = document.querySelector(".loader");
+  getLoaderDiv.classList.remove("loader");
+
   let createSizeOptions = `<option value="0">Select size</option>`;
 
   for (let i = 0; i < jacketDetails.sizes.length; i++) {
