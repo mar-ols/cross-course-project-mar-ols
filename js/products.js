@@ -3,11 +3,9 @@ import { error } from "./error.js";
 
 async function displayJackets() {
   const productWrapper = document.querySelector(".product_wrapper");
-
   try {
     const jackets = await fetchJackets();
-    const loaderDiv = document.querySelector(".loader");
-    loaderDiv.classList.remove("loader");
+    productWrapper.innerHTML = "";
 
     for (let i = 0; i < jackets.length; i++) {
       const jacket = jackets[i];
