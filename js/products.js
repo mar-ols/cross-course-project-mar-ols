@@ -23,8 +23,6 @@ async function displayJackets() {
                                    </div>`;
     }
   });
-
-  for (let i = 0; i < jackets.length; i++) {}
 }
 
 displayJackets();
