@@ -1,4 +1,9 @@
-export function showLoader() {
-  const productWrapper = document.querySelector(".product_wrapper");
-  productWrapper.innerHTML = `<div class="loader"></div>`;
+const loaderHtml = `<div class="loader"></div>`;
+
+export function loader() {
+  const loaderContainer = document.createElement("div");
+  loaderContainer.innerHTML = loaderHtml;
+
+  const main = document.querySelector("main");
+  main.appendChild(loaderContainer);
 }

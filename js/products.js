@@ -1,46 +1,31 @@
 import { fetchJackets } from "./api.js";
-import { error } from "./error.js";
 
 async function displayJackets() {
+  const jackets = await fetchJackets();
   const productWrapper = document.querySelector(".product_wrapper");
-  try {
-    const jackets = await fetchJackets();
-    productWrapper.innerHTML = "";
+  productWrapper.innerHTML = "";
 
-    for (let i = 0; i < jackets.length; i++) {
-      const jacket = jackets[i];
-      const discountedJackets = jackets[i].onSale;
-      const salePrice = jackets[i].discountedPrice;
-
-      const jacketDiv = document.createElement("div");
-      jacketDiv.classList.add("jacket");
-
-      const jacketImageLink = document.createElement("a");
-      jacketImageLink.classList.add("jacketImage");
-      jacketImageLink.href = `product_specific.html?id=${jacket.id}`;
-      jacketImageLink.innerHTML = `<img src="${jacket.image}">`;
-
-      const jacketText = document.createElement("p");
-      jacketText.classList.add("jacketText");
-      jacketText.innerHTML = `${jacket.title} $${jacket.price}`;
-
-      const viewButton = document.createElement("a");
-      viewButton.href = `product_specific.html?id=${jacket.id}`;
-      viewButton.classList.add("cta-button");
-      viewButton.textContent = "Click to view";
-
-      productWrapper.appendChild(jacketDiv);
-      jacketDiv.appendChild(jacketImageLink);
-      jacketDiv.appendChild(jacketText);
-      jacketDiv.appendChild(viewButton);
-
-      if (discountedJackets) {
-        jacketText.innerHTML = `${jacket.title} <span class="jacketSale">${jacket.price}</span> <span class="discount">${salePrice}</span>`;
-      }
+  jackets.forEach((jacket) => {
+    if (jacket.onSale) {
+      productWrapper.innerHTML += `
+                                   <div class="jacket">
+                                     <a href="product_specific.html?id=${jacket.id}" class="jacketImage">
+                                     <img src="${jacket.image}"></a>
+                                     <p class="jacketText">${jacket.title} <span class="jacketSale">$${jacket.price}</span> <span class="discount">$${jacket.discountedPrice}</span></p>
+                                     <a href="product_specific.html?id=${jacket.id}" class="cta-button">Click to view</a>
+                                   </div>`;
+    } else {
+      productWrapper.innerHTML += `
+                                   <div class="jacket">
+                                     <a href="product_specific.html?id=${jacket.id}" class="jacketImage">
+                                     <img src="${jacket.image}"></a>
+                                     <p class="jacketText">${jacket.title} $${jacket.price}</p>
+                                     <a href="product_specific.html?id=${jacket.id}" class="cta-button">Click to view</a>
+                                   </div>`;
     }
-  } catch {
-    productWrapper.innerHTML = error;
-  }
+  });
+
+  for (let i = 0; i < jackets.length; i++) {}
 }
 
 displayJackets();
