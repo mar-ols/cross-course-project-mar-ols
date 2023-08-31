@@ -1,26 +1,28 @@
 import { fetchJacket, title } from "./api.js";
+import { error } from "./error.js";
 
 async function createJacketHtml() {
-  const jacketDetails = await fetchJacket();
+  try {
+    const jacketDetails = await fetchJacket();
 
-  const jacketWrapper = document.querySelector(".product_specific");
-  const titleContainer = document.querySelector("#title");
-  const getLoaderDiv = document.querySelector(".loader");
-  getLoaderDiv.classList.remove("loader");
+    const jacketWrapper = document.querySelector(".product_specific");
+    const titleContainer = document.querySelector("#title");
+    const getLoaderDiv = document.querySelector(".loader");
+    getLoaderDiv.classList.remove("loader");
 
-  let createSizeOptions = `<option value="0">Select size</option>`;
+    let createSizeOptions = `<option value="0">Select size</option>`;
 
-  for (let i = 0; i < jacketDetails.sizes.length; i++) {
-    titleContainer.textContent = jacketWrapper.innerHTML = title;
+    for (let i = 0; i < jacketDetails.sizes.length; i++) {
+      titleContainer.textContent = jacketWrapper.innerHTML = title;
 
-    createSizeOptions +=
-      `<option value=` +
-      jacketDetails.sizes[i] +
-      `">` +
-      jacketDetails.sizes[i] +
-      `</option>`;
+      createSizeOptions +=
+        `<option value=` +
+        jacketDetails.sizes[i] +
+        `">` +
+        jacketDetails.sizes[i] +
+        `</option>`;
 
-    jacketWrapper.innerHTML = `
+      jacketWrapper.innerHTML = `
                                 <div>
                                   <a href="products.html" class="cta-button">Back</a>
                                 </div>
@@ -45,15 +47,18 @@ async function createJacketHtml() {
                                   </div>
                                 </div>`;
 
-    if (!jacketDetails.onSale) {
-      const hideDiscount = document.querySelector(".hideDiscount");
-      hideDiscount.style.display = "none";
-    }
+      if (!jacketDetails.onSale) {
+        const hideDiscount = document.querySelector(".hideDiscount");
+        hideDiscount.style.display = "none";
+      }
 
-    if (jacketDetails.onSale) {
-      const getSaleSpan = document.querySelector(".sales");
-      getSaleSpan.classList.add("jacketSale");
+      if (jacketDetails.onSale) {
+        const getSaleSpan = document.querySelector(".sales");
+        getSaleSpan.classList.add("jacketSale");
+      }
     }
+  } catch {
+    error();
   }
 }
 
