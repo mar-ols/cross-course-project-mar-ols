@@ -10,18 +10,18 @@ async function displayJackets() {
     if (jacket.onSale) {
       productWrapper.innerHTML += `
                                    <div class="jacket">
-                                     <a href="product_specific.html?id=${jacket.id}" class="jacketImage">
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="jacketImage">
                                      <img src="${jacket.image}"></a>
                                      <p class="jacketText">${jacket.title} <span class="jacketSale">$${jacket.price}</span> <span class="discount">$${jacket.discountedPrice}</span></p>
-                                     <a href="product_specific.html?id=${jacket.id}" class="cta-button">Click to view</a>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="cta-button">Click to view</a>
                                    </div>`;
     } else {
       productWrapper.innerHTML += `
                                    <div class="jacket">
-                                     <a href="product_specific.html?id=${jacket.id}" class="jacketImage">
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="jacketImage">
                                      <img src="${jacket.image}"></a>
                                      <p class="jacketText">${jacket.title} $${jacket.price}</p>
-                                     <a href="product_specific.html?id=${jacket.id}" class="cta-button">Click to view</a>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="cta-button">Click to view</a>
                                    </div>`;
     }
   });

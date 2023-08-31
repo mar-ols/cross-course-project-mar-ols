@@ -26,6 +26,8 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
+export const title = params.get("title");
+
 const specificJacketUrl = rainyDaysAPI + id;
 
 export async function fetchJacket() {
