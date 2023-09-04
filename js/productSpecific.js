@@ -57,7 +57,8 @@ async function createJacketHtml() {
         getSaleSpan.classList.add("jacketSale");
       }
     }
-  } catch {
+  } catch (e) {
+    console.error(e);
     error();
   }
 }

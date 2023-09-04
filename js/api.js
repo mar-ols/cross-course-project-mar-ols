@@ -1,5 +1,4 @@
 import { loader } from "./loader.js";
-import { error } from "./error.js";
 
 // Full Rainy Days API for products.js
 
@@ -7,15 +6,15 @@ const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
 
 export async function fetchJackets() {
   loader();
-  try {
-    const response = await fetch(rainyDaysAPI);
+  const response = await fetch(rainyDaysAPI);
 
-    const result = await response.json();
+  const result = await response.json();
 
+  if (response.ok) {
     return result;
-  } catch {
-    error();
   }
+
+  throw new Error("Failed to get jackets!");
 }
 
 // Single Rainy Days API for productSpecific.js
@@ -32,13 +31,9 @@ const specificJacketUrl = rainyDaysAPI + id;
 
 export async function fetchJacket() {
   loader();
-  try {
-    const response = await fetch(specificJacketUrl);
+  const response = await fetch(specificJacketUrl);
 
-    const jacketDetails = await response.json();
+  const jacketDetails = await response.json();
 
-    return jacketDetails;
-  } catch {
-    error();
-  }
+  return jacketDetails;
 }

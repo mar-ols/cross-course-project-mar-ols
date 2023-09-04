@@ -27,7 +27,8 @@ async function displayJackets() {
                                    </div>`;
       }
     });
-  } catch {
+  } catch (e) {
+    console.error(e);
     error();
   }
 }
