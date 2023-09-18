@@ -3,7 +3,7 @@ import { loader } from "./loader.js";
 // Full Rainy Days API for products.js
 
 const rainyDaysAPI =
-  "https://noroffcors.onrender.com/https://api.noroff.dev/api/v1/rainy-days/";
+  "https://cors.noroff.dev/https://api.noroff.dev/api/v1/rainy-days/";
 
 export async function fetchJackets() {
   loader();
