@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Your shopping bag" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/cart/renderCart.js" type="module" defer></script>
     <title>Rainy Days | Shopping bag</title>
     <!-- Hotjar Tracking Code for https://shiny-buttercream-049503.netlify.app -->
     <script>
@@ -89,44 +90,19 @@
         <div class="item_headers">
           <p>Price:</p>
           <p>Qty:</p>
-          <p>Sum:</p>
+          <p class="sumP">Sum:</p>
         </div>
-        <div class="item_info">
-          <p>$200</p>
-          <p>
-            <img
-              src="images/assets/icons/qty_selection.png"
-              alt="Quantity selection icon"
-            />
-          </p>
-          <p>$200</p>
-        </div>
-        <div class="sb_jacket">
-          <div>
-            <a href="product_specific.html">
-              <img
-                src="images/products/Jacket1.jpg"
-                alt="Scott Winter Jacket"
-                class="product_specific_img"
-            /></a>
-          </div>
-          <div>
-            <p><a href="product_specific.html">Scott Winter Jacket</a></p>
-            <p><a href="product_specific.html">Article no: 123-456</a></p>
-          </div>
-        </div>
+        <div class="cartContainer"></div>
         <div class="sum_breakdown">
           <div class="breakdown_text">
             <p>Sum articles:</p>
             <p>Shipping:</p>
             <p>Total incl. vat:</p>
-            <p>Vat:</p>
           </div>
           <div class="breakdown_numbers">
-            <p>$200</p>
+            <p class="sumContainer"></p>
             <p>$10</p>
-            <p>$210</p>
-            <p>$50</p>
+            <p class="plusShipping">$210</p>
           </div>
         </div>
         <div>

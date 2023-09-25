@@ -57,6 +57,7 @@ main a:hover {
   border-color: #0b626f;
   padding: 0.6rem;
   margin: 0.5rem;
+  font-family: inherit;
 }
 
 .cta-button:hover {
@@ -312,7 +313,11 @@ button[type="submit"] {
 }
 
 .item_headers p {
-  margin-left: 3rem;
+  margin-left: 3.5rem;
+}
+
+.sumP {
+  margin-right: 2.8rem;
 }
 
 .item_info p {
@@ -321,6 +326,8 @@ button[type="submit"] {
 
 .sb_jacket {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin: auto;
   width: 40rem;
@@ -361,6 +368,25 @@ button[type="submit"] {
 
 .buttons > * {
   flex: 1;
+}
+
+.counterContainer {
+  display: flex;
+  margin-left: 15px;
+}
+
+.quant {
+  text-align: center;
+  max-width: 20px;
+  height: 21px;
+  border: 2px solid #0b626f;
+}
+
+.inc,
+.dec {
+  background-color: #0b626f;
+  color: #fff;
+  padding: 4px 7px;
 }
 
 /* Mobile/desktop styling: shipping.html/payment.html */
