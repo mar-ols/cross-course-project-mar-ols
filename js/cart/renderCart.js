@@ -76,7 +76,9 @@ const getSumContainer = document.querySelector(".sumContainer");
 getSumContainer.innerHTML = `$${parseFloat(calculateTotal()).toFixed(2)}`;
 
 const getSumPlusShippingContainer = document.querySelector(".plusShipping");
-getSumPlusShippingContainer.innerHTML = `$${calculateTotalPlusShipping()}`;
+getSumPlusShippingContainer.innerHTML = `$${parseFloat(
+  calculateTotalPlusShipping().toFixed(2)
+)}`;
 renderCart();
 
 function remove() {
