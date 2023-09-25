@@ -67,7 +67,8 @@ function calculateTotalSingleJacket() {
       let a = parseFloat(cart[i].discount).toFixed(2);
       let b = cart[i].qty;
       let calculate = a * b;
-      getSumSingleJacketContainer[i].innerHTML = calculate;
+      getSumSingleJacketContainer[i].innerHTML =
+        parseFloat(calculate).toFixed(2);
     }
   }
 }
