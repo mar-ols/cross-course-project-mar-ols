@@ -23,7 +23,7 @@ function renderCart() {
                                          <button class="dec" id="${item.id}">-</button>
                                        </div>
                                        <div class="quantity">
-                                         <input class="quant" type="text" value="${item.qty}">
+                                         <input class="quant" type="text" value="${item.qty}" aria-label="Quantity">
                                        </div>
                                        <div class="increment">
                                          <button class="inc" id="${item.id}">+</button>
