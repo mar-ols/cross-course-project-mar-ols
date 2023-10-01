@@ -40,6 +40,14 @@ function onAddToCart(event) {
   }
 
   saveCart("cart", cart);
+
+  const popUp = document.querySelector(".popup");
+  const closeBtn = document.querySelector(".close");
+
+  popUp.style.display = "block";
+  popUp.addEventListener("click", () => {
+    popUp.style.display = "none";
+  });
 }
 
 async function addToCart() {

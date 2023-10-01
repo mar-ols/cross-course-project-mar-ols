@@ -44,8 +44,15 @@ async function createJacketHtml() {
                                   </div>
                                   <div>
                                     <button class="cta-button add_bag" data-id="${jacketDetails.id}" data-price="${jacketDetails.price}" data-discount="${jacketDetails.discountedPrice}" data-title="${jacketDetails.title}" data-onsale="${jacketDetails.onSale}" data-image="${jacketDetails.image}">Add to bag</button>
-                                </div>
-                              </div>`;
+                                  </div>
+                                  <div class="popup">
+                                    <div class="popup_text">
+                                      <span class="close">&times;</span>
+                                      <p>Excellent choice!</p>
+                                      <p>Your item has been added to the cart!</p>
+                                    </div>
+                                  </div>
+                                </div>`;
 
       if (!jacketDetails.onSale) {
         const hideDiscount = document.querySelector(".hideDiscount");
