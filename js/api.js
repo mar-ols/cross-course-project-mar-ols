@@ -2,11 +2,13 @@ import { loader } from "./loader.js";
 
 // Full Rainy Days API for products.js
 
-const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
+// const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
+
+const ownAPI = "https://www.mbo-cms-ca.com/wp-json/wc/store/products";
 
 export async function fetchJackets() {
   loader();
-  const response = await fetch(rainyDaysAPI);
+  const response = await fetch(ownAPI);
 
   const result = await response.json();
 
@@ -27,7 +29,7 @@ const id = params.get("id");
 
 export const title = params.get("title");
 
-const specificJacketUrl = rainyDaysAPI + id;
+const specificJacketUrl = ownAPI + "/" + id;
 
 export async function fetchJacket() {
   loader();

@@ -10,37 +10,37 @@ async function createJacketHtml() {
     const getLoaderDiv = document.querySelector(".loader");
     getLoaderDiv.classList.remove("loader");
 
-    let createSizeOptions = `<option value="0">Select size</option>`;
+    // let createSizeOptions = `<option value="0">Select size</option>`;
 
-    for (let i = 0; i < jacketDetails.sizes.length; i++) {
-      titleContainer.textContent = jacketWrapper.innerHTML = title;
+    // for (let i = 0; i < jacketDetails.sizes.length; i++) {
+    //   titleContainer.textContent = jacketWrapper.innerHTML = title;
 
-      createSizeOptions +=
-        `<option value=` +
-        jacketDetails.sizes[i] +
-        `">` +
-        jacketDetails.sizes[i] +
-        `</option>`;
+    // createSizeOptions +=
+    //   `<option value=` +
+    //   jacketDetails.sizes[i] +
+    //   `">` +
+    //   jacketDetails.sizes[i] +
+    //   `</option>`;
 
-      jacketWrapper.innerHTML = `
+    jacketWrapper.innerHTML = `
                                 <div>
                                   <a href="products.html" class="cta-button">Back</a>
                                 </div>
                                 <div class="jacketImage jacket_specific_image">
-                                  <img src="${jacketDetails.image}" alt="${jacketDetails.description}">
+                                  <div class="jacket-specific_image-container">
+                                  <img src="${jacketDetails.images[0].src}" alt="${jacketDetails.images[0].alt}">
+                                  </div>
                                   <i class="fa-regular fa-heart fa-xl"></i>
                                 </div>
                                 <div class="jacketCard">
                                   <div>
-                                    <h3>${jacketDetails.title} <span class="sales">$${jacketDetails.price}</span>
+                                    <h3>${jacketDetails.name} 
+                                    <p><span class="sales">$${jacketDetails.prices.price}</span></p>
                                     <span class="hideDiscount discount">$${jacketDetails.discountedPrice}</span></h3>
                                   </div>
                                   <div class="jacket_details">
                                     <p class="jacket_description"> ${jacketDetails.description}</p>
-                                    <p>Colour: ${jacketDetails.baseColor}</p>
-                                    <select id="size" name="size">
-                                      ${createSizeOptions}
-                                    </select>
+                                    <p>Colour: ${jacketDetails.attributes[0].terms[0].name}</p>
                                   </div>
                                   <div>
                                     <button class="cta-button add_bag" data-id="${jacketDetails.id}" data-price="${jacketDetails.price}" data-discount="${jacketDetails.discountedPrice}" data-title="${jacketDetails.title}" data-onsale="${jacketDetails.onSale}" data-image="${jacketDetails.image}">Add to bag</button>
@@ -54,16 +54,16 @@ async function createJacketHtml() {
                                   </div>
                                 </div>`;
 
-      if (!jacketDetails.onSale) {
-        const hideDiscount = document.querySelector(".hideDiscount");
-        hideDiscount.style.display = "none";
-      }
-
-      if (jacketDetails.onSale) {
-        const getSaleSpan = document.querySelector(".sales");
-        getSaleSpan.classList.add("jacketSale");
-      }
+    if (!jacketDetails.on_sale) {
+      const hideDiscount = document.querySelector(".hideDiscount");
+      hideDiscount.style.display = "none";
     }
+
+    // if (jacketDetails.onSale) {
+    //   const getSaleSpan = document.querySelector(".sales");
+    //   getSaleSpan.classList.add("jacketSale");
+    // }
+    // }
   } catch (e) {
     console.error(e);
     error();

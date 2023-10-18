@@ -12,18 +12,20 @@ async function displayJackets() {
       if (jacket.onSale) {
         productWrapper.innerHTML += `
                                    <div class="jacket">
-                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="jacketImage">
-                                     <img src="${jacket.image}" alt="${jacket.description}"></a>
-                                     <p class="jacketText">${jacket.title} <span class="jacketSale">$${jacket.price}</span> <span class="discount">$${jacket.discountedPrice}</span></p>
-                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="cta-button">Click to view</a>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.name}" class="jacketImage">
+                                     <img src="${jacket.images[0].src}" alt="${jacket.images[0].alt}"></a>
+                                     <p class="jacketText">${jacket.name} </p>
+                                     <p class="jacketText"><span class="jacketSale">${jacket.prices.price} kr</span> <span class="discount">${jacket.discountedPrice}</span></p>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.name}" class="cta-button">Click to view</a>
                                    </div>`;
       } else {
         productWrapper.innerHTML += `
                                    <div class="jacket">
-                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="jacketImage">
-                                     <img src="${jacket.image}" alt="${jacket.description}"></a>
-                                     <p class="jacketText">${jacket.title} $${jacket.price}</p>
-                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.title}" class="cta-button">Click to view</a>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.name}" class="jacketImage">
+                                     <img src="${jacket.images[0].src}" alt="${jacket.images[0].alt}"></a>
+                                     <p class="jacketText">${jacket.name}</p>
+                                     <p class="jacketText">${jacket.prices.price} kr</p>
+                                     <a href="product_specific.html?id=${jacket.id}&title=${jacket.name}" class="cta-button">Click to view</a>
                                    </div>`;
       }
     });
