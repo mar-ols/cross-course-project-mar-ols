@@ -17,7 +17,7 @@ function renderCart() {
     getCartContainer.innerHTML += `
                                  <div class="jacketId" data-id="${item.id}">  
                                    <div class="item_info">
-                                     <p>$${item.discount}</p>
+                                     <p>${item.discount} kr</p>
                                      <div class="counterContainer">
                                        <div class="decrement">
                                          <button class="dec" id="${item.id}">-</button>
@@ -33,7 +33,7 @@ function renderCart() {
                                      <p><i class="fa-solid fa-trash fa-lg" id="${item.id}"></i></p>
                                    </div>
                                    <div class="sb_jacket">
-                                     <img src="${item.image}" alt="S${item.title}" class="product_specific_img">
+                                     <img src="${item.image}" alt="${item.title}" class="product_specific_img">
                                      <div>
                                        <p><a href="product_specific.html?id=${item.id}">${item.title}</a></p>
                                      </div>
@@ -51,12 +51,12 @@ function calculateTotal() {
   }, 0);
 }
 
-function calculateTotalPlusShipping() {
-  return cart.reduce((total, currentItem) => {
-    let parsedNumber = parseFloat(currentItem.discount).toFixed(2);
-    return total + 10 + parsedNumber * currentItem.qty;
-  }, 0);
-}
+// function calculateTotalPlusShipping() {
+//   return cart.reduce((total, currentItem) => {
+//     let parsedNumber = parseFloat(currentItem.discount).toFixed(2);
+//     return total + 50 + parsedNumber * currentItem.qty;
+//   }, 0);
+// }
 
 function calculateTotalSingleJacket() {
   for (let i = 0; i < cart.length; i++) {
@@ -67,19 +67,16 @@ function calculateTotalSingleJacket() {
       let a = parseFloat(cart[i].discount).toFixed(2);
       let b = cart[i].qty;
       let calculate = a * b;
-      getSumSingleJacketContainer[i].innerHTML =
-        parseFloat(calculate).toFixed(2);
+      getSumSingleJacketContainer[i].innerHTML = `${parseFloat(calculate)} kr`;
     }
   }
 }
 
 const getSumContainer = document.querySelector(".sumContainer");
-getSumContainer.innerHTML = `$${parseFloat(calculateTotal()).toFixed(2)}`;
+getSumContainer.innerHTML = `${parseFloat(calculateTotal())} kr`;
 
 const getSumPlusShippingContainer = document.querySelector(".plusShipping");
-getSumPlusShippingContainer.innerHTML = `$${parseFloat(
-  calculateTotalPlusShipping().toFixed(2)
-)}`;
+getSumPlusShippingContainer.innerHTML = `${calculateTotal() + 50} kr`;
 renderCart();
 
 function remove() {
