@@ -43,7 +43,7 @@ async function createJacketHtml() {
                                     <p>Colour: ${jacketDetails.attributes[0].terms[0].name}</p>
                                   </div>
                                   <div>
-                                    <button class="cta-button add_bag" data-id="${jacketDetails.id}" data-price="${jacketDetails.price}" data-discount="${jacketDetails.discountedPrice}" data-title="${jacketDetails.title}" data-onsale="${jacketDetails.onSale}" data-image="${jacketDetails.image}">Add to bag</button>
+                                    <button class="cta-button add_bag" data-id="${jacketDetails.id}" data-price="${jacketDetails.prices.price}" data-discount="${jacketDetails.prices.sale_price}" data-title="${jacketDetails.name}" data-onsale="${jacketDetails.on_sale}" data-image="${jacketDetails.images[0].src}">Add to bag</button>
                                   </div>
                                   <div class="popup">
                                     <div class="popup_text">

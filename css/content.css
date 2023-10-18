@@ -237,8 +237,9 @@ select option {
 
 .popup_text {
   background-color: white;
-  position: absolute;
-  top: 40%;
+  position: fixed;
+  z-index: 2;
+  top: 35%;
   left: 30%;
   width: 40%;
   padding: 20px;
